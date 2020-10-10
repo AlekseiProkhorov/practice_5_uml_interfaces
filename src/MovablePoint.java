@@ -1,11 +1,12 @@
-public class MovablePoint implements Movable{
+public class MovablePoint implements Movable {
     int x;
     int y;
     int xSpeed;
     int ySpeed;
     int speedRatio = 1;
 
-    public MovablePoint() {}
+    public MovablePoint() {
+    }
 
     public MovablePoint(int x, int y, int xSpeed, int ySpeed) {
         this.x = x;
@@ -14,21 +15,24 @@ public class MovablePoint implements Movable{
         this.ySpeed = ySpeed;
     }
 
-    public void moveUp(){
+    public void moveUp() {
         y += ySpeed * speedRatio;
     }
-    public void moveDown(){
+
+    public void moveDown() {
         y -= ySpeed * speedRatio;
     }
-    public void moveLeft(){
+
+    public void moveLeft() {
         x -= xSpeed * speedRatio;
     }
-    public void moveRight(){
+
+    public void moveRight() {
         x += xSpeed * speedRatio;
     }
-    public String toString(){
-        return "Current point coordinates: \n" +
-                "x = " + x + "\ny = " + y;
+
+    public String toString() {
+        return "x = " + x + "\ny = " + y;
     }
 
 }
